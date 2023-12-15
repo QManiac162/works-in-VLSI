@@ -1,0 +1,31 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000215442068d0 .scope module, "mag_comp" "mag_comp" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "A";
+    .port_info 1 /INPUT 3 "B";
+    .port_info 2 /OUTPUT 1 "AltB";
+    .port_info 3 /OUTPUT 1 "AgtB";
+    .port_info 4 /OUTPUT 1 "AeqB";
+o00000215440d6fd8 .functor BUFZ 3, C4<zzz>; HiZ drive
+v00000215442087e0_0 .net "A", 2 0, o00000215440d6fd8;  0 drivers
+v00000215440d6cc0_0 .net "AeqB", 0 0, L_000002154420e5e0;  1 drivers
+v0000021544206a60_0 .net "AgtB", 0 0, L_0000021544206ce0;  1 drivers
+v0000021544206b00_0 .net "AltB", 0 0, L_0000021544206c40;  1 drivers
+o00000215440d7098 .functor BUFZ 3, C4<zzz>; HiZ drive
+v0000021544206ba0_0 .net "B", 2 0, o00000215440d7098;  0 drivers
+L_0000021544206c40 .cmp/gt 3, o00000215440d7098, o00000215440d6fd8;
+L_0000021544206ce0 .cmp/eq 3, o00000215440d6fd8, o00000215440d7098;
+L_000002154420e5e0 .cmp/gt 3, o00000215440d6fd8, o00000215440d7098;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "mag_comp.v";

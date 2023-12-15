@@ -1,0 +1,41 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001c25dc46860 .scope module, "mux4to1_df" "mux4to1_df" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "i0";
+    .port_info 1 /INPUT 1 "i1";
+    .port_info 2 /INPUT 1 "i2";
+    .port_info 3 /INPUT 1 "i3";
+    .port_info 4 /INPUT 1 "s0";
+    .port_info 5 /INPUT 1 "s1";
+    .port_info 6 /OUTPUT 1 "out";
+v000001c25dc46a70_0 .net *"_ivl_0", 0 0, L_000001c25dc4e340;  1 drivers
+v000001c25dc46b10_0 .net *"_ivl_2", 0 0, L_000001c25dc4e3e0;  1 drivers
+o000001c25dc97018 .functor BUFZ 1, C4<z>; HiZ drive
+v000001c25dc46bb0_0 .net "i0", 0 0, o000001c25dc97018;  0 drivers
+o000001c25dc97048 .functor BUFZ 1, C4<z>; HiZ drive
+v000001c25dc46c50_0 .net "i1", 0 0, o000001c25dc97048;  0 drivers
+o000001c25dc97078 .functor BUFZ 1, C4<z>; HiZ drive
+v000001c25dc4df90_0 .net "i2", 0 0, o000001c25dc97078;  0 drivers
+o000001c25dc970a8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001c25dc4e030_0 .net "i3", 0 0, o000001c25dc970a8;  0 drivers
+v000001c25dc4e0d0_0 .net "out", 0 0, L_000001c25dc4e480;  1 drivers
+o000001c25dc97108 .functor BUFZ 1, C4<z>; HiZ drive
+v000001c25dc4e170_0 .net "s0", 0 0, o000001c25dc97108;  0 drivers
+o000001c25dc97138 .functor BUFZ 1, C4<z>; HiZ drive
+v000001c25dc4e210_0 .net "s1", 0 0, o000001c25dc97138;  0 drivers
+L_000001c25dc4e340 .functor MUXZ 1, o000001c25dc97078, o000001c25dc970a8, o000001c25dc97138, C4<>;
+L_000001c25dc4e3e0 .functor MUXZ 1, o000001c25dc97018, o000001c25dc97048, o000001c25dc97138, C4<>;
+L_000001c25dc4e480 .functor MUXZ 1, L_000001c25dc4e3e0, L_000001c25dc4e340, o000001c25dc97108, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "mux4to1_df_conditional.v";
